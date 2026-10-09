@@ -1,175 +1,73 @@
-Sitio Web Informativo Insuco - Espacios de Aprendizaje
-Descripción
+# Sitio web Informativo Insuco - Espacios de Aprendizaje
 
-Este proyecto consiste en un sitio web informativo diseñado para presentar los espacios de aprendizaje y los cinco laboratorios de computación de la especialidad de Programación del liceo.
+## Descripción
 
-El sitio permite conocer las características de los laboratorios, su equipamiento, sus responsables y sus horarios de uso. Además, incluye una sección personal dedicada a la autora, donde se presentan sus intereses, pasatiempos, metas profesionales e información de contacto.
+Este proyecto consiste en un sitio web informativo y personal diseñado para presentar los laboratorios de computación de la especialidad de Programación en el liceo, sus características, equipamiento y horarios de uso. Asimismo, incluye una sección dedicada a la autora del sitio web, sus intereses académicos, metas profesionales e información de contacto.
 
-El diseño utiliza una interfaz moderna y adaptable a distintos dispositivos, con una paleta de colores basada en tonos verdes (#17352f y #2f5d50), crema (#f8f5ee) y detalles dorados (#c7a96b).
+El sitio fue diseñado con una interfaz limpia, profesional y moderna, estructurada mediante el uso de tonos verdes (`#17352f`, `#2f5d50`), crema (`#f8f5ee`) y detalles en dorado (`#c7a96b`). Cuenta con un diseño adaptativo (*responsive design*) que permite una visualización en computadores, tablets y dispositivos móviles.
 
-Objetivos del proyecto
-Presentar información sobre los cinco laboratorios de computación del liceo.
-Dar a conocer las características, el equipamiento y los horarios de cada laboratorio.
-Compartir el perfil personal y los objetivos académicos y profesionales de la autora.
-Facilitar la comunicación mediante un formulario de contacto.
-Ofrecer una navegación clara y adaptable a computadores, tablets y teléfonos móviles.
-Secciones del sitio web
-1. Inicio (index.html)
-Portada principal del sitio web.
-Presentación de los espacios tecnológicos y de aprendizaje del liceo.
-Acceso a las distintas secciones mediante el menú de navegación.
-Reproductor de música ambiental, si se mantiene habilitado en la versión actual.
-2. Sobre mí (sobre-mi.html)
-Presentación personal de Valentina, estudiante de cuarto medio de la especialidad de Programación.
-Información sobre sus metas profesionales y su interés por estudiar Medicina Veterinaria.
-Descripción de sus intereses y pasatiempos.
-Fotografía personal de la autora.
-3. Laboratorios (laboratorios.html)
-Presentación general de los cinco laboratorios de computación.
-Información sobre sus características y recursos tecnológicos.
-Información sobre los responsables de los espacios.
-Acceso a las páginas de detalle de cada laboratorio.
-4. Páginas de los laboratorios
+## Objetivos del proyecto
 
-Cada laboratorio cuenta con su propia página para consultar información específica.
+- Proveer información clara e interactiva sobre los laboratorios de computación del liceo (equipamiento, responsables, horarios y cursos).
+- Dar a conocer el perfil de la autora, sus estudios actuales y su meta profesional de estudiar Medicina Veterinaria.
+- Facilitar un medio de comunicación directo mediante un formulario de contacto funcional en el sitio.
 
-lab01.html — Laboratorio 01.
-lab02.html — Laboratorio 02.
-lab03.html — Laboratorio 03.
-lab04.html — Laboratorio 04.
-lab05.html — Laboratorio 05.
-5. Contacto (contacto.html)
-Formulario de contacto con campos para nombre, correo electrónico y mensaje.
-Validación de los campos obligatorios.
-Información relacionada con el propósito del sitio web.
-Tecnologías utilizadas
-HTML5: estructura y organización del contenido.
-CSS3: diseño visual y estilos de las páginas.
-Flexbox y CSS Grid: distribución de los elementos.
-Media Queries: adaptación del sitio a diferentes tamaños de pantalla.
-Variables CSS: organización de los colores del diseño.
-JavaScript: únicamente si se utiliza en las funcionalidades actuales del proyecto.
-Estructura del proyecto
+## Secciones y Páginas del Sitio
+
+El sitio se encuentra dividido en cuatro páginas principales navegables desde el menú superior:
+
+### 1. Inicio (`index.html`)
+- Presentación general de los espacios tecnológicos y de aprendizaje del liceo.
+- Acceso directo a las distintas secciones del sitio.
+- Reproductor de ambiente/música (*CORTIS - JoyRide*) como elemento complementario durante la navegación.
+
+### 2. Sobre mí (`sobre-mi.html`)
+- **Presentación personal:** Información sobre Valentina, estudiante de 4to medio en la especialidad de programación.
+- **Metas y futuro:** Interés por estudiar Medicina Veterinaria, especialización internacional en Nueva Zelanda y trabajo con animales exóticos.
+- **Intereses personales y pasatiempos:** Lectura, música (en especial CORTIS), cocina, dibujo y aprendizaje de inglés y programación.
+
+### 3. Laboratorios (`laboratorios.html` y detalle por laboratorio)
+- Muestra el listado de los laboratorios del liceo, sus características generales, responsables (Prof. Juan Acevedo y técnico Eduardo Salazar) y páginas de detalle individual:
+  - `lab01.html`: Detalle y horario semanal del Laboratorio 01.
+  - `lab02.html`: Detalle y horario semanal del Laboratorio 02.
+  - *(lab03.html, lab04.html, lab05.html)*.
+
+### 4. Contacto (`contacto.html`)
+- Formulario de contacto interactivo con validación de campos obligatorios (`Nombre`, `Correo electrónico` y `Mensaje`).
+- Sección de preguntas e información del propósito del sitio.
+
+## Tecnologías Utilizadas
+
+- **HTML5:** Estructuración semántica del contenido (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`, etc.).
+- **CSS3:** Hoja de estilos principal (`estilos.css`) con implementación de:
+  - Variables CSS (`:root`) para la paleta de colores.
+  - *Flexbox* y *CSS Grid* para la maquetación y distribución espacial de tarjetas y tablas.
+  - *Media Queries* para garantizar el diseño adaptativo (*responsive*).
+  - Animaciones CSS (`@keyframes`) para elementos interactivos como el reproductor y rotación de imágenes.
+
+## Estructura del Proyecto
+
+```text
 sitio-personal/
 │
-├── index.html
-├── sobre-mi.html
-├── laboratorios.html
-├── lab01.html
-├── lab02.html
-├── lab03.html
-├── lab04.html
-├── lab05.html
-├── contacto.html
-├── estilos.css
-├── README.md
+├── index.html          # Página principal de bienvenida
+├── sobre-mi.html       # Página con información personal y metas de Valentina
+├── laboratorios.html   # Listado general de laboratorios de computación
+├── lab01.html          # Detalle y horarios del Laboratorio 01
+├── lab02.html          # Detalle y horarios del Laboratorio 02
+├── lab04.html          # Detalle y horarios del Laboratorio 03
+├── lab02.html          # Detalle y horarios del Laboratorio 04
+├── lab05.html          # Detalle y horarios del Laboratorio 05
+├── contacto.html       # Formulario de comunicación y contacto
+├── estilos.css         # Hoja de estilos global del proyecto
 │
 ├── audio/
+│   └── musica.mp3      # Archivo de audio para el reproductor en Inicio
 │
-├── img/
-│
-└── portada.jpg
-
-
-Nota: esta estructura es referencial. Los nombres de las imágenes y los archivos deben coincidir con los que existen realmente en el repositorio.
-
-Diseño y experiencia de usuario
-
-El sitio mantiene una identidad visual coherente mediante tonos verdes, crema y dorado. Su diseño busca facilitar la lectura, organizar la información y permitir una navegación sencilla entre las distintas páginas.
-
-La adaptación a diferentes tamaños de pantalla permite acceder al contenido desde computadores, tablets y teléfonos móviles.
-
-Autora
-
-Valentina
-
-Estudiante de cuarto medio de la especialidad de Programación.
-
-Proyecto desarrollado con fines informativos y educativos para presentar los espacios de aprendizaje y los laboratorios de computación del liceo.Sitio Web Informativo Insuco - Espacios de Aprendizaje
-Descripción
-
-Este proyecto consiste en un sitio web informativo diseñado para presentar los espacios de aprendizaje y los cinco laboratorios de computación de la especialidad de Programación del liceo.
-
-El sitio permite conocer las características de los laboratorios, su equipamiento, sus responsables y sus horarios de uso. Además, incluye una sección personal dedicada a la autora, donde se presentan sus intereses, pasatiempos, metas profesionales e información de contacto.
-
-El diseño utiliza una interfaz moderna y adaptable a distintos dispositivos, con una paleta de colores basada en tonos verdes (#17352f y #2f5d50), crema (#f8f5ee) y detalles dorados (#c7a96b).
-
-Objetivos del proyecto
-Presentar información sobre los cinco laboratorios de computación del liceo.
-Dar a conocer las características, el equipamiento y los horarios de cada laboratorio.
-Compartir el perfil personal y los objetivos académicos y profesionales de la autora.
-Facilitar la comunicación mediante un formulario de contacto.
-Ofrecer una navegación clara y adaptable a computadores, tablets y teléfonos móviles.
-Secciones del sitio web
-1. Inicio (index.html)
-Portada principal del sitio web.
-Presentación de los espacios tecnológicos y de aprendizaje del liceo.
-Acceso a las distintas secciones mediante el menú de navegación.
-Reproductor de música ambiental, si se mantiene habilitado en la versión actual.
-2. Sobre mí (sobre-mi.html)
-Presentación personal de Valentina, estudiante de cuarto medio de la especialidad de Programación.
-Información sobre sus metas profesionales y su interés por estudiar Medicina Veterinaria.
-Descripción de sus intereses y pasatiempos.
-Fotografía personal de la autora.
-3. Laboratorios (laboratorios.html)
-Presentación general de los cinco laboratorios de computación.
-Información sobre sus características y recursos tecnológicos.
-Información sobre los responsables de los espacios.
-Acceso a las páginas de detalle de cada laboratorio.
-4. Páginas de los laboratorios
-
-Cada laboratorio cuenta con su propia página para consultar información específica.
-
-lab01.html — Laboratorio 01.
-lab02.html — Laboratorio 02.
-lab03.html — Laboratorio 03.
-lab04.html — Laboratorio 04.
-lab05.html — Laboratorio 05.
-5. Contacto (contacto.html)
-Formulario de contacto con campos para nombre, correo electrónico y mensaje.
-Validación de los campos obligatorios.
-Información relacionada con el propósito del sitio web.
-Tecnologías utilizadas
-HTML5: estructura y organización del contenido.
-CSS3: diseño visual y estilos de las páginas.
-Flexbox y CSS Grid: distribución de los elementos.
-Media Queries: adaptación del sitio a diferentes tamaños de pantalla.
-Variables CSS: organización de los colores del diseño.
-JavaScript: únicamente si se utiliza en las funcionalidades actuales del proyecto.
-Estructura del proyecto
-sitio-personal/
-│
-├── index.html
-├── sobre-mi.html
-├── laboratorios.html
-├── lab01.html
-├── lab02.html
-├── lab03.html
-├── lab04.html
-├── lab05.html
-├── contacto.html
-├── estilos.css
-├── README.md
-│
-├── audio/
-│
-├── img/
-│
-└── portada.jpg
-
-
-Nota: esta estructura es referencial. Los nombres de las imágenes y los archivos deben coincidir con los que existen realmente en el repositorio.
-
-Diseño y experiencia de usuario
-
-El sitio mantiene una identidad visual coherente mediante tonos verdes, crema y dorado. Su diseño busca facilitar la lectura, organizar la información y permitir una navegación sencilla entre las distintas páginas.
-
-La adaptación a diferentes tamaños de pantalla permite acceder al contenido desde computadores, tablets y teléfonos móviles.
-
-Autora
-
-Valentina
-
-Estudiante de cuarto medio de la especialidad de Programación.
-
-Proyecto desarrollado con fines informativos y educativos para presentar los espacios de aprendizaje y los laboratorios de computación del liceo.
+└── img/
+    ├── valentina.jpeg  # Fotografía principal para la sección "Sobre mí"
+    ├── lab01.jpg       # Imagen del Laboratorio 01
+    ├── lab02.jpg       # Imagen del Laboratorio 02
+    ├── lab03.jpg       # Imagen del Laboratorio 03
+    ├── lab04.jpg       # Imagen del Laboratorio 04
+    └── lab05.jpg       # Imagen del Laboratorio 05
