@@ -1,0 +1,2683 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #26332f;
+    background-color: #f8f5ee;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+:root {
+    --verde-oscuro: #17352f;
+    --verde: #2f5d50;
+    --verde-claro: #719789;
+
+    --crema: #f8f5ee;
+    --blanco: #ffffff;
+
+    --dorado: #c7a96b;
+    --dorado-claro: #e7d7b2;
+
+    --texto: #26332f;
+    --gris: #66736e;
+    --borde: #dedbd3;
+
+    --verde-suave: #edf3f0;
+    --crema-oscuro: #f1eee6;
+}
+
+
+/* =========================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: rgba(248, 245, 238, 0.97);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #e5e1d8;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1150px;
+    min-height: 75px;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--verde-oscuro);
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--dorado);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    list-style: none;
+}
+
+.menu a {
+    position: relative;
+
+    color: var(--verde-oscuro);
+
+    font-size: 0.9rem;
+
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--dorado);
+
+    transition: width 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.activo {
+    color: var(--verde);
+}
+
+.menu a:hover::after,
+.menu a.activo::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   ELEMENTOS GENERALES
+   ========================================================= */
+
+.pequeno-titulo {
+    margin-bottom: 12px;
+
+    color: var(--dorado);
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.linea {
+    width: 55px;
+    height: 3px;
+
+    margin: 20px auto;
+
+    background-color: var(--dorado);
+}
+
+.linea-izquierda {
+    margin-left: 0;
+}
+
+.texto-introduccion {
+    max-width: 700px;
+    margin: 25px auto 0;
+
+    color: var(--gris);
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.botones {
+    display: flex;
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.boton {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+.boton.principal {
+    background-color: var(--verde-oscuro);
+    color: white;
+}
+
+.boton.principal:hover {
+    background-color: var(--verde);
+}
+
+.boton.secundario {
+    border: 1px solid var(--verde);
+    color: var(--verde);
+}
+
+.boton.secundario:hover {
+    background-color: var(--verde);
+    color: white;
+}
+
+
+/* =========================================================
+   ENCABEZADO DE PÁGINAS
+   ========================================================= */
+
+.pagina-encabezado {
+    padding: 100px 20px 90px;
+
+    background-color: var(--verde-oscuro);
+
+    color: white;
+
+    text-align: center;
+}
+
+.pagina-encabezado-contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+.pagina-encabezado .pequeno-titulo {
+    color: var(--dorado-claro);
+}
+
+.pagina-encabezado h1 {
+    margin-bottom: 15px;
+
+    font-size: clamp(2.8rem, 7vw, 5rem);
+
+    line-height: 1.05;
+}
+
+.pagina-encabezado p:last-child {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   INICIO
+   ========================================================= */
+
+.inicio {
+    width: 90%;
+    max-width: 1150px;
+
+    min-height: calc(100vh - 75px);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+.inicio-texto {
+    padding: 60px 0;
+}
+
+.inicio h1 {
+    margin-bottom: 25px;
+
+    color: var(--verde-oscuro);
+
+    font-size: clamp(3rem, 7vw, 5.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.inicio h1 span {
+    display: block;
+    color: var(--verde);
+}
+
+.descripcion {
+    max-width: 600px;
+
+    margin-bottom: 25px;
+
+    color: var(--gris);
+
+    font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   ELEMENTO VISUAL
+   ========================================================= */
+
+.inicio-visual {
+    position: relative;
+
+    height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.grande {
+    width: 360px;
+    height: 360px;
+
+    background-color: var(--dorado-claro);
+
+    opacity: 0.55;
+}
+
+.pequeno {
+    width: 150px;
+    height: 150px;
+
+    top: 60px;
+    right: 20px;
+
+    background-color: var(--verde-claro);
+
+    opacity: 0.35;
+}
+
+.laboratorio-icono {
+    position: relative;
+    z-index: 2;
+
+    width: 260px;
+    height: 260px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--verde-oscuro);
+
+    font-size: 6rem;
+
+    box-shadow:
+        0 25px 60px rgba(23, 53, 47, 0.2);
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.titulo-seccion {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.titulo-seccion h2 {
+    color: var(--verde-oscuro);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   RESPONSABLES
+   ========================================================= */
+
+.informacion-laboratorios {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 80px 0 20px;
+}
+
+.informacion-laboratorios-grid,
+.responsables-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.info-personal-lab,
+.responsable-card {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    background-color: var(--blanco);
+
+    border-radius: 14px;
+
+    border: 1px solid var(--borde);
+
+    box-shadow:
+        0 10px 30px rgba(23, 53, 47, 0.06);
+}
+
+.info-icono {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--dorado-claro);
+
+    font-size: 1.5rem;
+}
+
+.etiqueta-info {
+    margin-bottom: 4px;
+
+    color: var(--dorado);
+
+    font-size: 0.7rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.info-personal-lab h2,
+.responsable-card h2 {
+    margin-bottom: 8px;
+
+    color: var(--verde-oscuro);
+
+    font-size: 1.4rem;
+}
+
+.info-personal-lab p:last-child,
+.responsable-card p:last-child {
+    color: var(--gris);
+
+    font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   LISTA DE LABORATORIOS
+   ========================================================= */
+
+.laboratorios {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 0;
+}
+
+.laboratorios-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+.laboratorio-card {
+    overflow: hidden;
+
+    background-color: var(--blanco);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 30px rgba(23, 53, 47, 0.08);
+
+    border-top: 5px solid var(--verde);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.laboratorio-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(23, 53, 47, 0.14);
+}
+
+.laboratorio-1 {
+    border-top-color: #4a944f;
+}
+
+.laboratorio-2 {
+    border-top-color: #5bba62;
+}
+
+.laboratorio-3 {
+    border-top-color: #479e61;
+}
+
+.laboratorio-4 {
+    border-top-color: #c9d46c;
+}
+
+.laboratorio-5 {
+    border-top-color: #b1d46c;
+}
+
+.laboratorio-imagen {
+    width: 100%;
+    height: 250px;
+
+    overflow: hidden;
+
+    background-color: #e8e5dd;
+}
+
+.laboratorio-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.laboratorio-card:hover .laboratorio-imagen img {
+    transform: scale(1.05);
+}
+
+.laboratorio-card-contenido {
+    padding: 30px;
+}
+
+.numero-laboratorio {
+    margin-bottom: 5px;
+
+    color: var(--verde);
+
+    font-size: 0.75rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.laboratorio-card h3 {
+    margin-bottom: 12px;
+
+    color: var(--verde-oscuro);
+
+    font-size: 1.35rem;
+}
+
+.laboratorio-card-contenido > p:not(.numero-laboratorio) {
+    margin-bottom: 22px;
+
+    color: var(--gris);
+
+    font-size: 0.95rem;
+}
+
+.boton-card {
+    display: inline-block;
+
+    color: var(--verde);
+
+    font-weight: bold;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.boton-card:hover {
+    color: var(--dorado);
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   INFORMACIÓN GENERAL
+   ========================================================= */
+
+.informacion {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding-bottom: 110px;
+}
+
+.informacion-contenido {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 70px;
+
+    padding: 60px;
+
+    background-color: var(--verde-oscuro);
+
+    color: white;
+
+    border-radius: 12px;
+}
+
+.informacion h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.informacion-contenido > div:last-child {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.informacion-contenido p {
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   LABORATORIOS INDIVIDUALES
+   COMPATIBLE CON LAB01 - LAB05
+   ========================================================= */
+
+.detalle-laboratorio,
+.lab-detalle-hero {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+.detalle-laboratorio {
+    padding: 90px 0;
+}
+
+.detalle-contenido,
+.lab-detalle-hero {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+/* =========================================================
+   HERO - ESTRUCTURA NUEVA
+   ========================================================= */
+
+.detalle-texto h1,
+.lab-detalle-hero-contenido h1 {
+    margin-bottom: 25px;
+
+    color: var(--verde-oscuro);
+
+    font-size: clamp(2.8rem, 6vw, 5rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.detalle-texto h1 span,
+.lab-detalle-hero-contenido h1 span {
+    display: block;
+
+    color: var(--verde);
+}
+
+.detalle-texto .descripcion,
+.lab-detalle-hero-contenido > p:not(.pequeno-titulo) {
+    max-width: 600px;
+
+    margin-bottom: 20px;
+
+    color: var(--gris);
+
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   IMÁGENES DE LOS LABORATORIOS
+   ========================================================= */
+
+.detalle-imagen,
+.lab-detalle-hero-imagen {
+    width: 100%;
+
+    min-height: 420px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background-color: #e7e3d9;
+
+    box-shadow:
+        0 20px 50px rgba(23, 53, 47, 0.13);
+}
+
+.detalle-imagen img,
+.lab-detalle-hero-imagen img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 420px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.detalle-imagen:hover img,
+.lab-detalle-hero-imagen:hover img {
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   CARACTERÍSTICAS
+   ========================================================= */
+
+.informacion-laboratorio {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 90px 0;
+}
+
+.informacion-laboratorio .titulo-seccion {
+    margin-bottom: 45px;
+}
+
+.informacion-laboratorio .titulo-seccion h2 {
+    color: var(--verde-oscuro);
+
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    line-height: 1.2;
+}
+
+.informacion-laboratorio .linea {
+    width: 55px;
+    height: 3px;
+
+    margin: 20px auto;
+
+    background-color: var(--dorado);
+}
+
+
+/* =========================================================
+   GRID DE CARACTERÍSTICAS
+   ========================================================= */
+
+.caracteristicas-grid {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   TARJETAS DE CARACTERÍSTICAS
+   ========================================================= */
+
+.caracteristica-card {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 75px minmax(0, 1fr);
+
+    grid-template-areas:
+        "icono titulo"
+        "icono texto";
+
+    column-gap: 25px;
+
+    align-items: center;
+
+    padding: 30px 35px;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--borde);
+
+    border-left: 5px solid var(--verde);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(23, 53, 47, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.caracteristica-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 32px rgba(23, 53, 47, 0.11);
+}
+
+
+/* =========================================================
+   ICONOS
+   ========================================================= */
+
+.caracteristica-icono {
+    grid-area: icono;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--dorado-claro);
+
+    color: var(--verde-oscuro);
+
+    font-size: 1.7rem;
+}
+
+
+/* =========================================================
+   TÍTULOS Y TEXTO
+   ========================================================= */
+
+.caracteristica-card h3 {
+    grid-area: titulo;
+
+    margin-bottom: 5px;
+
+    color: var(--verde-oscuro);
+
+    font-size: 1.25rem;
+
+    line-height: 1.3;
+}
+
+.caracteristica-card p {
+    grid-area: texto;
+
+    margin: 0;
+
+    color: var(--gris);
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   COLORES POR LABORATORIO
+   Funciona aunque .laboratorio-X esté en el contenedor
+   ========================================================= */
+
+.laboratorio-1 .caracteristica-card {
+    border-left-color: #4a944f;
+}
+
+.laboratorio-2 .caracteristica-card {
+    border-left-color: #5bba62;
+}
+
+.laboratorio-3 .caracteristica-card {
+    border-left-color: #479e61;
+}
+
+.laboratorio-4 .caracteristica-card {
+    border-left-color: #c9d46c;
+}
+
+.laboratorio-5 .caracteristica-card {
+    border-left-color: #b1d46c;
+}
+
+
+/* =========================================================
+   ESTRUCTURA ANTIGUA DE LABORATORIO
+   ========================================================= */
+
+.lab-detalle {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 80px 0;
+}
+
+.lab-detalle-grid {
+    display: grid;
+
+    grid-template-columns: 1.3fr 0.7fr;
+
+    gap: 70px;
+}
+
+.lab-descripcion h2,
+.datos-laboratorio h2 {
+    color: var(--verde-oscuro);
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+}
+
+.lab-descripcion p:not(.pequeno-titulo) {
+    margin-bottom: 20px;
+
+    color: var(--gris);
+}
+
+.datos-laboratorio {
+    padding: 35px;
+
+    background-color: white;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 12px 30px rgba(23, 53, 47, 0.08);
+}
+
+.dato {
+    padding: 18px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid var(--borde);
+}
+
+.dato:last-child {
+    border-bottom: none;
+}
+
+.dato span {
+    color: var(--gris);
+
+    font-size: 0.9rem;
+}
+
+.dato strong {
+    color: var(--verde-oscuro);
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   HORARIOS
+   COMPATIBLE CON ESTRUCTURAS NUEVAS Y ANTIGUAS
+   ========================================================= */
+
+.horarios,
+.horario-laboratorio {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 50px 0 100px;
+}
+
+
+/* Contenedor de tabla */
+
+.tabla-contenedor {
+    width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* Todas las tablas de horarios */
+
+.tabla-contenedor table,
+.tabla-horarios {
+    width: 100%;
+
+    min-width: 700px;
+
+    border-collapse: collapse;
+
+    border-spacing: 0;
+}
+
+
+/* Encabezados */
+
+.tabla-contenedor th,
+.tabla-horarios th {
+    padding: 17px 15px;
+
+    background-color: var(--verde-oscuro);
+
+    color: white;
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+
+    text-align: left;
+}
+
+
+/* Celdas */
+
+.tabla-contenedor td,
+.tabla-horarios td {
+    padding: 15px;
+
+    border-bottom: 1px solid #ebe8e1;
+
+    color: var(--texto);
+
+    font-size: 0.9rem;
+
+    vertical-align: middle;
+}
+
+
+/* Primera columna */
+
+.tabla-contenedor td:first-child,
+.tabla-contenedor th:first-child,
+.tabla-horarios td:first-child,
+.tabla-horarios th:first-child {
+    white-space: nowrap;
+}
+
+
+/* Hover */
+
+.tabla-contenedor tbody tr:hover,
+.tabla-horarios tbody tr:hover {
+    background-color: #f8f7f2;
+}
+
+
+/* Última fila */
+
+.tabla-contenedor tbody tr:last-child td,
+.tabla-horarios tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   RECREOS
+   ========================================================= */
+
+/*
+   Se aplican a cualquier fila que tenga:
+   .fila-recreo
+   .recreo
+   .bloque-recreo
+*/
+
+.tabla-contenedor tbody tr.fila-recreo,
+.tabla-contenedor tbody tr.recreo,
+.tabla-contenedor tbody tr.bloque-recreo,
+.tabla-horarios tbody tr.fila-recreo,
+.tabla-horarios tbody tr.recreo,
+.tabla-horarios tbody tr.bloque-recreo {
+    background-color: var(--crema-oscuro);
+}
+
+.tabla-contenedor tbody tr.fila-recreo td,
+.tabla-contenedor tbody tr.recreo td,
+.tabla-contenedor tbody tr.bloque-recreo td,
+.tabla-horarios tbody tr.fila-recreo td,
+.tabla-horarios tbody tr.recreo td,
+.tabla-horarios tbody tr.bloque-recreo td {
+    color: #77736b;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   BLOQUES ESPECIALES
+   ========================================================= */
+
+.bloque-especial,
+.fila-especial {
+    background-color: var(--verde-suave);
+}
+
+.bloque-especial td,
+.fila-especial td {
+    color: var(--verde-oscuro);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN ENTRE LABORATORIOS
+   ========================================================= */
+
+.navegacion-labs {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 0 0 100px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   NOTA
+   ========================================================= */
+
+.nota-laboratorio {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 0 0 80px;
+}
+
+.nota-contenido {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 30px;
+
+    background-color: var(--verde-suave);
+
+    border-left: 4px solid var(--verde);
+
+    border-radius: 10px;
+}
+
+.nota-icono {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--blanco);
+
+    font-size: 1.3rem;
+}
+
+.nota-contenido h3 {
+    margin-bottom: 8px;
+
+    color: var(--verde-oscuro);
+
+    font-size: 1.1rem;
+}
+
+.nota-contenido p {
+    color: var(--gris);
+
+    font-size: 0.92rem;
+}
+
+
+/* =========================================================
+   BOTÓN FINAL
+   ========================================================= */
+
+.volver-laboratorios {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 20px 0 110px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   GALERÍA
+   ========================================================= */
+
+.lab-galeria {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px 0 100px;
+}
+
+.foto-laboratorio-grande {
+    max-height: 650px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background-color: #e7e3d9;
+
+    box-shadow:
+        0 15px 40px rgba(23, 53, 47, 0.1);
+}
+
+.foto-laboratorio-grande img {
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+.contacto {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 0 130px;
+}
+
+.formulario {
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(23, 53, 47, 0.1);
+}
+
+.formulario label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--verde-oscuro);
+
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+
+    margin-bottom: 25px;
+
+    padding: 14px 16px;
+
+    border: 1px solid var(--borde);
+
+    border-radius: 5px;
+
+    outline: none;
+
+    background-color: #fcfbf8;
+
+    color: var(--texto);
+
+    font-size: 1rem;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: var(--verde);
+
+    box-shadow:
+        0 0 0 3px rgba(47, 93, 80, 0.1);
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background-color: var(--verde-oscuro);
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: var(--verde);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   REPRODUCTOR
+   ========================================================= */
+
+.reproductor {
+    max-width: 550px;
+
+    margin-top: 45px;
+
+    padding: 25px;
+
+    background-color: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 35px rgba(23, 53, 47, 0.08);
+
+    text-align: left;
+}
+
+.portada-musica {
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 20px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border: 4px solid var(--blanco);
+
+    box-shadow:
+        0 10px 25px rgba(23, 53, 47, 0.18);
+
+    animation:
+        girar-portada 20s linear infinite;
+}
+
+.portada-musica img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.reproductor-info {
+    margin-bottom: 18px;
+}
+
+.now-playing {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: var(--dorado);
+
+    font-size: 0.7rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.reproductor-info h3 {
+    margin-bottom: 3px;
+
+    color: var(--verde-oscuro);
+
+    font-size: 1.1rem;
+}
+
+.reproductor-info p {
+    color: var(--gris);
+
+    font-size: 0.85rem;
+
+    font-style: italic;
+}
+
+.reproductor-controles audio {
+    width: 100%;
+    height: 40px;
+}
+
+.barra-musica {
+    width: 100%;
+    height: 5px;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: #e4e1d8;
+}
+
+.progreso-musica {
+    width: 0%;
+    height: 100%;
+
+    background-color: var(--dorado);
+
+    border-radius: 10px;
+
+    animation:
+        avanzar-musica 157s linear infinite;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+
+footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background-color: var(--verde-oscuro);
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 3px 0;
+}
+
+
+/* =========================================================
+   ANIMACIONES
+   ========================================================= */
+
+@keyframes avanzar-musica {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes girar-portada {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .inicio {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 70px 0;
+    }
+
+    .descripcion {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .botones {
+        justify-content: center;
+    }
+
+    .inicio-visual {
+        height: 350px;
+    }
+
+    .laboratorios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .informacion-contenido {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .informacion-laboratorios-grid,
+    .responsables-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detalle-contenido,
+    .lab-detalle-hero {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .detalle-texto,
+    .lab-detalle-hero-contenido {
+        text-align: center;
+    }
+
+    .detalle-texto .descripcion,
+    .lab-detalle-hero-contenido > p:not(.pequeno-titulo) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .detalle-texto .botones,
+    .lab-detalle-hero-contenido .botones {
+        justify-content: center;
+    }
+
+    .lab-detalle-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 100px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .menu {
+        gap: 15px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 0.78rem;
+    }
+
+    .inicio {
+        min-height: auto;
+
+        padding: 70px 0;
+    }
+
+    .inicio h1 {
+        font-size: 3rem;
+
+        letter-spacing: -1px;
+    }
+
+    .descripcion {
+        font-size: 1rem;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .boton {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .inicio-visual {
+        height: 280px;
+    }
+
+    .grande {
+        width: 240px;
+        height: 240px;
+    }
+
+    .laboratorio-icono {
+        width: 180px;
+        height: 180px;
+
+        font-size: 4rem;
+    }
+
+    .pequeno {
+        width: 100px;
+        height: 100px;
+    }
+
+    .pagina-encabezado {
+        padding: 75px 20px;
+    }
+
+    .pagina-encabezado h1 {
+        font-size: 3rem;
+    }
+
+    .laboratorios,
+    .contacto {
+        padding: 80px 0;
+    }
+
+    .info-personal-lab,
+    .responsable-card {
+        flex-direction: column;
+    }
+
+    .laboratorio-imagen {
+        height: 210px;
+    }
+
+    .laboratorio-card-contenido {
+        padding: 25px;
+    }
+
+    .informacion {
+        padding-bottom: 80px;
+    }
+
+    .informacion-contenido {
+        padding: 35px 25px;
+    }
+
+
+    /* =====================================================
+       LABORATORIO INDIVIDUAL
+       ===================================================== */
+
+    .detalle-laboratorio,
+    .lab-detalle-hero {
+        width: 90%;
+
+        padding: 60px 0;
+    }
+
+    .detalle-texto h1,
+    .lab-detalle-hero-contenido h1 {
+        font-size: 3rem;
+    }
+
+    .detalle-imagen,
+    .lab-detalle-hero-imagen {
+        min-height: 300px;
+    }
+
+    .detalle-imagen img,
+    .lab-detalle-hero-imagen img {
+        min-height: 300px;
+    }
+
+
+    /* =====================================================
+       CARACTERÍSTICAS
+       ===================================================== */
+
+    .informacion-laboratorio {
+        padding: 60px 0 80px;
+    }
+
+    .caracteristica-card {
+        grid-template-columns: 60px minmax(0, 1fr);
+
+        column-gap: 20px;
+
+        padding: 25px;
+    }
+
+    .caracteristica-icono {
+        width: 55px;
+        height: 55px;
+
+        font-size: 1.4rem;
+    }
+
+
+    /* =====================================================
+       HORARIOS
+       ===================================================== */
+
+    .horarios,
+    .horario-laboratorio {
+        width: 90%;
+
+        padding-bottom: 70px;
+    }
+
+    .tabla-contenedor {
+        width: 100%;
+
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .tabla-contenedor table,
+    .tabla-horarios {
+        min-width: 700px;
+    }
+
+
+    /* =====================================================
+       NOTA
+       ===================================================== */
+
+    .nota-laboratorio {
+        padding-bottom: 60px;
+    }
+
+    .nota-contenido {
+        padding: 25px;
+
+        gap: 15px;
+    }
+
+
+    /* =====================================================
+       VOLVER
+       ===================================================== */
+
+    .volver-laboratorios {
+        padding-bottom: 80px;
+    }
+
+
+    /* =====================================================
+       GALERÍA
+       ===================================================== */
+
+    .lab-galeria {
+        padding-bottom: 70px;
+    }
+
+
+    /* =====================================================
+       FORMULARIO
+       ===================================================== */
+
+    .formulario {
+        padding: 30px 20px;
+    }
+
+
+    /* =====================================================
+       REPRODUCTOR
+       ===================================================== */
+
+    .reproductor {
+        width: 100%;
+
+        padding: 20px;
+    }
+
+    .reproductor-info h3 {
+        font-size: 1rem;
+    }
+
+    .reproductor-info p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .menu {
+        gap: 10px;
+    }
+
+    .inicio h1 {
+        font-size: 2.5rem;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 2rem;
+    }
+
+    .pagina-encabezado h1 {
+        font-size: 2.5rem;
+    }
+
+    .detalle-texto h1,
+    .lab-detalle-hero-contenido h1 {
+        font-size: 2.5rem;
+    }
+
+    .nota-contenido {
+        flex-direction: column;
+    }
+}
+
+/* =========================================================
+   PÁGINA SOBRE MÍ
+   ========================================================= */
+
+.sobre-mi {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 90px 0 120px;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.sobre-mi .titulo-seccion {
+    margin-bottom: 65px;
+
+    text-align: center;
+}
+
+.sobre-mi .titulo-seccion h1 {
+    color: var(--verde-oscuro);
+
+    font-size: clamp(2.5rem, 6vw, 4rem);
+
+    line-height: 1.1;
+}
+
+.sobre-mi .texto-introduccion {
+    max-width: 700px;
+
+    margin: 25px auto 0;
+
+    color: var(--gris);
+
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   INFORMACIÓN PERSONAL
+   ========================================================= */
+
+.sobre-mi-contenido {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    margin-bottom: 80px;
+}
+
+
+/* =========================================================
+   FOTOGRAFÍA
+   ========================================================= */
+
+.sobre-mi-foto {
+    width: 100%;
+
+    min-height: 480px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background-color: #e7e3d9;
+
+    border: 1px solid var(--borde);
+
+    box-shadow:
+        0 20px 50px rgba(23, 53, 47, 0.12);
+}
+
+.sobre-mi-foto img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 480px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.sobre-mi-foto:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   TEXTO PERSONAL
+   ========================================================= */
+
+.sobre-mi-texto {
+    padding: 10px 0;
+}
+
+.sobre-mi-texto h2 {
+    margin-bottom: 25px;
+
+    color: var(--verde-oscuro);
+
+    font-size: 2.2rem;
+
+    line-height: 1.2;
+}
+
+.sobre-mi-texto h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin-top: 15px;
+
+    background-color: var(--dorado);
+}
+
+.sobre-mi-texto p {
+    margin-bottom: 18px;
+
+    color: var(--gris);
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.sobre-mi-tarjetas {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.sobre-mi-card {
+    position: relative;
+
+    padding: 35px;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 14px;
+
+    border-top: 4px solid var(--verde);
+
+    box-shadow:
+        0 10px 30px rgba(23, 53, 47, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sobre-mi-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 16px 35px rgba(23, 53, 47, 0.11);
+}
+
+
+/* =========================================================
+   COLORES DE LAS TARJETAS
+   ========================================================= */
+
+.sobre-mi-card:nth-child(1) {
+    border-top-color: #4a944f;
+}
+
+.sobre-mi-card:nth-child(2) {
+    border-top-color: #5bba62;
+}
+
+.sobre-mi-card:nth-child(3) {
+    border-top-color: #479e61;
+}
+
+.sobre-mi-card:nth-child(4) {
+    border-top-color: #c9d46c;
+}
+
+
+/* =========================================================
+   ICONOS
+   ========================================================= */
+
+.sobre-mi-icono {
+    width: 60px;
+    height: 60px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background-color: var(--dorado-claro);
+
+    font-size: 1.7rem;
+}
+
+
+/* =========================================================
+   TÍTULOS DE LAS TARJETAS
+   ========================================================= */
+
+.sobre-mi-card h3 {
+    margin-bottom: 15px;
+
+    color: var(--verde-oscuro);
+
+    font-size: 1.3rem;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   TEXTO DE LAS TARJETAS
+   ========================================================= */
+
+.sobre-mi-card p {
+    margin-bottom: 14px;
+
+    color: var(--gris);
+
+    font-size: 0.94rem;
+
+    line-height: 1.7;
+}
+
+.sobre-mi-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .sobre-mi-contenido {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .sobre-mi-foto {
+        max-width: 600px;
+
+        min-height: 500px;
+
+        margin: auto;
+    }
+
+    .sobre-mi-foto img {
+        min-height: 500px;
+    }
+
+    .sobre-mi-texto {
+        text-align: center;
+    }
+
+    .sobre-mi-texto h2::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* =========================================================
+   CELULARES
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .sobre-mi {
+        width: 90%;
+
+        padding: 70px 0 90px;
+    }
+
+    .sobre-mi .titulo-seccion {
+        margin-bottom: 45px;
+    }
+
+    .sobre-mi .titulo-seccion h1 {
+        font-size: 3rem;
+    }
+
+    .sobre-mi-contenido {
+        gap: 35px;
+
+        margin-bottom: 60px;
+    }
+
+    .sobre-mi-foto {
+        min-height: 380px;
+
+        border-radius: 14px;
+    }
+
+    .sobre-mi-foto img {
+        min-height: 380px;
+    }
+
+    .sobre-mi-texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .sobre-mi-texto p {
+        font-size: 0.95rem;
+    }
+
+    .sobre-mi-tarjetas {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .sobre-mi-card {
+        padding: 28px 25px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .sobre-mi .titulo-seccion h1 {
+        font-size: 2.5rem;
+    }
+
+    .sobre-mi-foto {
+        min-height: 320px;
+    }
+
+    .sobre-mi-foto img {
+        min-height: 320px;
+    }
+
+    .sobre-mi-card {
+        padding: 25px 20px;
+    }
+}
+
+/* =========================================================
+   AJUSTE DE LAS TARJETAS DE LA PÁGINA PRINCIPAL
+   ========================================================= */
+
+/* 
+   Organiza las tarjetas en dos columnas.
+   También agrega espacio entre cada tarjeta.
+*/
+.laboratorios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/*
+   Define el espacio interno y la altura mínima
+   de cada tarjeta.
+   
+   Flex permite ordenar el contenido de la tarjeta
+   de forma vertical.
+*/
+.laboratorio-card {
+    padding: 30px;
+    min-height: 210px;
+
+    display: flex;
+    flex-direction: column;
+
+    /* Distribuye el contenido de forma ordenada */
+    justify-content: space-between;
+}
+
+
+/*
+   Agrega espacio entre el número de sección
+   y el título de la tarjeta.
+*/
+.laboratorio-card h3 {
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+
+/*
+   Da espacio debajo de la descripción
+   y mejora la separación entre las líneas.
+*/
+.laboratorio-card > p:not(.numero-laboratorio) {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+/*
+   Mantiene el botón alineado al comienzo
+   de la tarjeta.
+*/
+.laboratorio-card .boton {
+    align-self: flex-start;
+}
+
+
+/* =========================================================
+   TARJETA DE CONTACTO
+   ========================================================= */
+
+/*
+   La tercera tarjeta ocupa una posición centrada
+   debajo de las dos primeras tarjetas.
+*/
+.laboratorio-3 {
+    grid-column: 1 / -1;
+
+    /* Mantiene el mismo ancho aproximado
+       que las tarjetas superiores */
+    width: calc(50% - 15px);
+
+    /* Centra la tarjeta horizontalmente */
+    justify-self: center;
+}
+
+
+/* =========================================================
+   ESPACIADO GENERAL DE LA SECCIÓN
+   ========================================================= */
+
+/*
+   Reduce un poco el espacio superior e inferior
+   de la sección de tarjetas.
+*/
+.laboratorios {
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+
+
+/*
+   Controla la separación entre el título
+   y las tarjetas.
+*/
+.titulo-seccion {
+    margin-bottom: 50px;
+}
+
+
+/*
+   Agrega separación debajo del título
+   principal de la sección.
+*/
+.titulo-seccion h2 {
+    margin-bottom: 15px;
+}
+
+
+/*
+   Agrega espacio entre el texto introductorio
+   y los elementos que lo rodean.
+*/
+.texto-introduccion {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   ADAPTACIÓN PARA CELULARES
+   ========================================================= */
+
+/*
+   Cuando la pantalla es menor a 700px,
+   las tarjetas pasan a ocupar una sola columna.
+*/
+@media (max-width: 700px) {
+
+    /*
+       Cambia el diseño a una sola columna
+       para que las tarjetas no queden apretadas.
+    */
+    .laboratorios-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /*
+       La tarjeta de contacto deja de ocupar
+       toda una fila y vuelve a su tamaño normal.
+    */
+    .laboratorio-3 {
+        grid-column: auto;
+        width: 100%;
+    }
+
+
+    /*
+       En celulares las tarjetas ya no necesitan
+       una altura mínima fija.
+    */
+    .laboratorio-card {
+        min-height: auto;
+    }
+
+}
+
+/* =========================================================
+   AJUSTE DE LAS TARJETAS DE INFORMACIÓN DE LOS LABORATORIOS
+   ========================================================= */
+
+/*
+   Organiza las características de los laboratorios
+   en dos columnas para aprovechar mejor el espacio.
+*/
+.caracteristicas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+
+/*
+   Diseño general de cada tarjeta.
+   Se elimina la distribución horizontal anterior
+   y se organiza el contenido de forma vertical.
+*/
+.caracteristica-card {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px 30px;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--verde);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(23, 53, 47, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/*
+   Efecto al pasar el mouse sobre una tarjeta.
+*/
+.caracteristica-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 32px rgba(23, 53, 47, 0.11);
+}
+
+
+/*
+   Etiqueta superior de la tarjeta.
+   Ejemplo: SISTEMA OPERATIVO, RENDIMIENTO,
+   USO ACADÉMICO o UBICACIÓN.
+*/
+.caracteristica-card .etiqueta-info {
+    margin-bottom: 10px;
+
+    color: var(--verde);
+
+    font-size: 0.72rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/*
+   Título principal de la característica.
+   Ejemplo: Ubuntu, Actividades informáticas,
+   Segundo piso, etc.
+*/
+.caracteristica-card h3 {
+    margin: 0 0 12px 0;
+
+    color: var(--verde-oscuro);
+
+    font-size: 1.3rem;
+
+    line-height: 1.3;
+}
+
+
+/*
+   Descripción de cada característica.
+*/
+.caracteristica-card p {
+    margin: 0;
+
+    color: var(--gris);
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   TARJETAS DE RESPONSABLES
+   ========================================================= */
+
+/*
+   Organiza los responsables en dos columnas.
+*/
+.responsables-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/*
+   Diseño de las tarjetas de los responsables.
+*/
+.responsable-card {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 28px 30px;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 25px rgba(23, 53, 47, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/*
+   Efecto al pasar el mouse sobre la tarjeta.
+*/
+.responsable-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 32px rgba(23, 53, 47, 0.11);
+}
+
+
+/*
+   Etiqueta que indica el cargo.
+   Ejemplo: PROFESOR A CARGO o TÉCNICO.
+*/
+.responsable-card .etiqueta-info {
+    margin-bottom: 5px;
+
+    color: var(--verde);
+
+    font-size: 0.72rem;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/*
+   Nombre de la persona responsable.
+*/
+.responsable-card h2 {
+    margin: 0 0 8px 0;
+
+    color: var(--verde-oscuro);
+
+    font-size: 1.35rem;
+
+    line-height: 1.3;
+}
+
+
+/*
+   Descripción de las funciones del responsable.
+*/
+.responsable-card p {
+    margin: 0;
+
+    color: var(--gris);
+
+    font-size: 0.95rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ADAPTACIÓN PARA PANTALLAS PEQUEÑAS
+   ========================================================= */
+
+/*
+   En pantallas pequeñas las tarjetas pasan
+   a ocupar una sola columna.
+*/
+@media (max-width: 700px) {
+
+    .caracteristicas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .responsables-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .caracteristica-card,
+    .responsable-card {
+        padding: 25px;
+    }
+
+}

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         CONFIGURACIÓN DEL DOCUMENTO
+         ===================================================== -->
+
+    <!-- Permite utilizar correctamente caracteres especiales
+         como á, é, í, ó, ú, ñ, etc. -->
+    <meta charset="UTF-8">
+
+
+    <!-- Permite adaptar el sitio a computadores,
+         tablets y celulares. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Título que aparece en la pestaña del navegador. -->
+    <title>Espacios de Aprendizaje | Liceo</title>
+
+
+    <!-- Conexión con la hoja de estilos principal. -->
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         ENCABEZADO Y MENÚ DE NAVEGACIÓN
+         ===================================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- =============================================
+                 LOGO
+                 =============================================
+
+                 El logo permite volver a la página principal.
+                 ============================================= -->
+
+            <a href="index.html" class="logo">
+
+                Espacios<span>.</span>
+
+            </a>
+
+
+
+            <!-- =============================================
+                 MENÚ PRINCIPAL
+                 ============================================= -->
+
+            <ul class="menu">
+
+
+                <!-- Página de inicio -->
+                <li>
+
+                    <a href="index.html">
+                        Inicio
+                    </a>
+
+                </li>
+
+
+                <!-- Información personal de la autora -->
+                <li>
+
+                    <a href="sobre-mi.html">
+                        Sobre mí
+                    </a>
+
+                </li>
+
+
+                <!-- Información de los laboratorios -->
+                <li>
+
+                    <a href="laboratorios.html">
+                        Laboratorios
+                    </a>
+
+                </li>
+
+
+                <!-- Formulario de contacto -->
+                <li>
+
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             SECCIÓN DE PRESENTACIÓN
+             =================================================
+
+             Esta sección funciona como portada informativa
+             del sitio.
+
+             A diferencia de una página personal, el foco
+             está puesto en el tema del proyecto:
+             los espacios de aprendizaje y los laboratorios
+             disponibles en el liceo.
+             ================================================= -->
+
+        <section id="inicio" class="inicio">
+
+
+            <!-- =============================================
+                 INFORMACIÓN PRINCIPAL
+                 ============================================= -->
+
+            <div class="inicio-texto">
+
+
+                <!-- Categoría de la página -->
+                <p class="pequeno-titulo">
+
+                    SITIO INFORMATIVO
+
+                </p>
+
+
+                <!-- Título principal -->
+
+                <h1>
+
+                    Espacios de
+                    <span>aprendizaje</span>
+
+                </h1>
+
+
+                <!-- Descripción general del sitio -->
+
+                <p class="descripcion">
+
+                    Este sitio presenta información sobre los
+                    laboratorios de computación del liceo, sus
+                    características, ubicación y recursos
+                    disponibles para el desarrollo de actividades
+                    académicas.
+
+                </p>
+
+
+
+                <!-- =========================================
+                     BOTONES PRINCIPALES
+                     ========================================= -->
+
+                <div class="botones">
+
+
+                    <!-- Acceso a la información de laboratorios -->
+
+                    <a
+                        href="laboratorios.html"
+                        class="boton principal"
+                    >
+
+                        Conocer los laboratorios
+
+                    </a>
+
+
+                    <!-- Acceso a la información sobre la autora -->
+
+                    <a
+                        href="sobre-mi.html"
+                        class="boton secundario"
+                    >
+
+                        Sobre el proyecto
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     INFORMACIÓN DESTACADA
+                     =========================================
+
+                     Pequeño bloque informativo que refuerza
+                     que el sitio tiene un propósito educativo.
+                     ========================================= -->
+
+                <div class="reproductor">
+
+
+                    <!-- Portada decorativa -->
+
+                    <div class="portada-musica">
+
+                        <img
+                            src="portada.jpg"
+                            alt="Portada de la canción utilizada en el sitio"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Información de la música -->
+
+                    <div class="reproductor-info">
+
+                        <span class="now-playing">
+
+                            AMBIENTE DEL SITIO
+
+                        </span>
+
+
+                        <h3>
+
+                            CORTIS - JoyRide
+
+                        </h3>
+
+
+                        <p>
+
+                            Música utilizada como elemento
+                            complementario durante la navegación.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Controles del reproductor -->
+
+                    <div class="reproductor-controles">
+
+                        <audio controls loop>
+
+                            <source
+                                src="audio/musica.mp3"
+                                type="audio/mpeg"
+                            >
+
+                            <!-- Mensaje alternativo -->
+
+                            Tu navegador no puede reproducir
+                            este audio.
+
+                        </audio>
+
+                    </div>
+
+
+
+                    <!-- Barra decorativa -->
+
+                    <div class="barra-musica">
+
+                        <div class="progreso-musica"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 ELEMENTO VISUAL
+                 =============================================
+
+                 Representa visualmente la idea de tecnología,
+                 aprendizaje y trabajo práctico.
+                 ============================================= -->
+
+            <div class="inicio-visual">
+
+
+                <!-- Círculo decorativo principal -->
+
+                <div class="circulo grande"></div>
+
+
+                <!-- Círculo decorativo secundario -->
+
+                <div class="circulo pequeno"></div>
+
+
+                <!-- Elemento visual central -->
+
+                <div class="laboratorio-icono">
+
+                    🧪
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PRESENTACIÓN DEL SITIO
+             =================================================
+
+             Esta sección entrega información rápida sobre
+             lo que el visitante puede encontrar.
+             ================================================= -->
+
+        <section class="informacion">
+
+
+            <div class="informacion-contenido">
+
+
+                <!-- =============================================
+                     COLUMNA IZQUIERDA
+                     ============================================= -->
+
+                <div>
+
+
+                    <p class="pequeno-titulo">
+
+                        SOBRE ESTE SITIO
+
+                    </p>
+
+
+                    <h2>
+
+                        Información sobre los espacios
+                        tecnológicos del liceo
+
+                    </h2>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     COLUMNA DERECHA
+                     ============================================= -->
+
+                <div>
+
+
+                    <p>
+
+                        Los laboratorios son espacios destinados
+                        al aprendizaje práctico y al desarrollo
+                        de diferentes actividades relacionadas
+                        con la tecnología.
+
+                    </p>
+
+
+                    <p>
+
+                        En este sitio se pueden consultar las
+                        características generales de los cinco
+                        laboratorios, sus equipos, sistemas
+                        operativos y ubicación dentro del liceo.
+
+                    </p>
+
+
+                    <p>
+
+                        También se presenta información sobre
+                        la autora del proyecto, sus intereses,
+                        aprendizajes actuales y objetivos
+                        relacionados con su futuro académico.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACCESOS PRINCIPALES
+             =================================================
+
+             Estas tarjetas funcionan como accesos rápidos
+             a las diferentes partes del sitio.
+             ================================================= -->
+
+        <section class="laboratorios">
+
+
+            <!-- Título -->
+
+            <div class="titulo-seccion">
+
+                <p class="pequeno-titulo">
+
+                    EXPLORA EL SITIO
+
+                </p>
+
+
+                <h2>
+
+                    Información disponible
+
+                </h2>
+
+
+                <div class="linea"></div>
+
+
+                <p class="texto-introduccion">
+
+                    Utiliza las siguientes secciones para
+                    conocer los contenidos disponibles en
+                    este sitio web.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =============================================
+                 TARJETAS DE ACCESO
+                 ============================================= -->
+
+            <div class="laboratorios-grid">
+
+
+
+                <!-- =============================================
+                     TARJETA: LABORATORIOS
+                     ============================================= -->
+
+                <article class="laboratorio-card laboratorio-1">
+
+
+                    <p class="numero-laboratorio">
+
+                        SECCIÓN 01
+
+                    </p>
+
+
+                    <h3>
+
+                        Laboratorios
+
+                    </h3>
+
+
+                    <p>
+
+                        Conoce los cinco laboratorios del liceo,
+                        sus características, equipos, sistemas
+                        operativos y ubicación.
+
+                    </p>
+
+
+                    <a
+                        href="laboratorios.html"
+                        class="boton principal"
+                    >
+
+                        Ver laboratorios →
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =============================================
+                     TARJETA: SOBRE MÍ
+                     ============================================= -->
+
+                <article class="laboratorio-card laboratorio-2">
+
+
+                    <p class="numero-laboratorio">
+
+                        SECCIÓN 02
+
+                    </p>
+
+
+                    <h3>
+
+                        Sobre mí
+
+                    </h3>
+
+
+                    <p>
+
+                        Conoce a la autora del proyecto, sus
+                        intereses, aprendizajes y objetivos
+                        relacionados con su futuro profesional.
+
+                    </p>
+
+
+                    <a
+                        href="sobre-mi.html"
+                        class="boton principal"
+                    >
+
+                        Conocer más →
+
+                    </a>
+
+                </article>
+
+
+
+                <!-- =============================================
+                     TARJETA: CONTACTO
+                     ============================================= -->
+
+                <article class="laboratorio-card laboratorio-3">
+
+
+                    <p class="numero-laboratorio">
+
+                        SECCIÓN 03
+
+                    </p>
+
+
+                    <h3>
+
+                        Contacto
+
+                    </h3>
+
+
+                    <p>
+
+                        Si necesitas información adicional
+                        sobre el sitio o sus contenidos,
+                        puedes utilizar el formulario de contacto.
+
+                    </p>
+
+
+                    <a
+                        href="contacto.html"
+                        class="boton principal"
+                    >
+
+                        Ir a contacto →
+
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         PIE DE PÁGINA
+         ===================================================== -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Valentina · Sitio informativo
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

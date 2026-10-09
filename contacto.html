@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =====================================================
+         CONFIGURACIÓN DEL DOCUMENTO
+         ===================================================== -->
+
+    <!-- Permite utilizar correctamente caracteres especiales
+         como á, é, í, ó, ú, ñ, etc. -->
+    <meta charset="UTF-8">
+
+
+    <!-- Permite que el sitio se adapte correctamente
+         a computadores, tablets y celulares. -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+
+    <!-- Título que aparece en la pestaña del navegador. -->
+    <title>Contacto | Valentina</title>
+
+
+    <!-- Conexión con la hoja de estilos principal. -->
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         ENCABEZADO Y MENÚ DE NAVEGACIÓN
+         =====================================================
+
+         El menú permite desplazarse entre las diferentes
+         páginas que forman parte del sitio web.
+
+         Páginas disponibles:
+
+         - index.html
+         - sobre-mi.html
+         - laboratorios.html
+         - contacto.html
+
+         ===================================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+
+            <!-- =============================================
+                 LOGO DEL SITIO
+                 =============================================
+
+                 Al hacer clic sobre el logo, el usuario
+                 vuelve a la página principal.
+                 ============================================= -->
+
+            <a href="index.html" class="logo">
+
+                Espacios<span>.</span>
+
+            </a>
+
+
+
+            <!-- =============================================
+                 MENÚ PRINCIPAL
+                 ============================================= -->
+
+            <ul class="menu">
+
+
+                <!-- Enlace a la página de inicio -->
+
+                <li>
+
+                    <a href="index.html">
+                        Inicio
+                    </a>
+
+                </li>
+
+
+                <!-- Enlace a la página Sobre mí -->
+
+                <li>
+
+                    <a href="sobre-mi.html">
+                        Sobre mí
+                    </a>
+
+                </li>
+
+
+                <!-- Enlace a la página de laboratorios -->
+
+                <li>
+
+                    <a href="laboratorios.html">
+                        Laboratorios
+                    </a>
+
+                </li>
+
+
+                <!-- Página actual -->
+
+                <li>
+
+                    <a href="contacto.html">
+                        Contacto
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             SECCIÓN DE CONTACTO
+             =================================================
+
+             Esta sección contiene la información relacionada
+             con el contacto y el formulario que permite al
+             usuario escribir un mensaje.
+             ================================================= -->
+
+        <section class="contacto">
+
+
+            <!-- =============================================
+                 TÍTULO DE LA SECCIÓN
+                 ============================================= -->
+
+            <div class="titulo-seccion">
+
+
+                <!-- Texto pequeño sobre el título -->
+
+                <p class="pequeno-titulo">
+
+                    COMUNICACIÓN
+
+                </p>
+
+
+                <!-- Título principal -->
+
+                <h1>
+
+                    Contacto
+
+                </h1>
+
+
+                <!-- Línea decorativa -->
+
+                <div class="linea"></div>
+
+
+                <!-- Descripción de la sección -->
+
+                <p>
+
+                    Si necesitas información sobre el sitio,
+                    los laboratorios o el proyecto, puedes
+                    utilizar el siguiente formulario para
+                    dejar un mensaje.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FORMULARIO DE CONTACTO
+                 =================================================
+
+                 El formulario permite ingresar:
+
+                 - Nombre
+                 - Correo electrónico
+                 - Mensaje
+
+                 Los campos utilizan etiquetas <label> asociadas
+                 mediante el atributo "for", lo que facilita su
+                 utilización y mejora la accesibilidad.
+                 ================================================= -->
+
+            <form
+                class="formulario"
+                action="#"
+                method="post"
+            >
+
+
+                <!-- =============================================
+                     CAMPO: NOMBRE
+                     ============================================= -->
+
+                <label for="nombre">
+
+                    Nombre
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    autocomplete="name"
+                    required
+                >
+
+
+
+                <!-- =============================================
+                     CAMPO: CORREO ELECTRÓNICO
+                     ============================================= -->
+
+                <label for="email">
+
+                    Correo electrónico
+
+                </label>
+
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="tu@email.com"
+                    autocomplete="email"
+                    required
+                >
+
+
+
+                <!-- =============================================
+                     CAMPO: MENSAJE
+                     ============================================= -->
+
+                <label for="mensaje">
+
+                    Mensaje
+
+                </label>
+
+
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="7"
+                    placeholder="Escribe tu mensaje..."
+                    required
+                ></textarea>
+
+
+
+                <!-- =============================================
+                     BOTÓN DE ENVÍO
+                     ============================================= -->
+
+                <button type="submit">
+
+                    Enviar mensaje →
+
+                </button>
+
+
+            </form>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INFORMACIÓN ADICIONAL
+             =================================================
+
+             Esta sección explica brevemente el propósito
+             del formulario.
+             ================================================= -->
+
+        <section class="informacion">
+
+
+            <div class="informacion-contenido">
+
+
+                <!-- =============================================
+                     COLUMNA IZQUIERDA
+                     ============================================= -->
+
+                <div>
+
+
+                    <p class="pequeno-titulo">
+
+                        INFORMACIÓN
+
+                    </p>
+
+
+                    <h2>
+
+                        ¿Tienes alguna pregunta?
+
+                    </h2>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     COLUMNA DERECHA
+                     ============================================= -->
+
+                <div>
+
+
+                    <p>
+
+                        Este formulario está incluido como parte
+                        del sitio web para permitir que los
+                        visitantes puedan escribir un mensaje
+                        relacionado con el proyecto.
+
+                    </p>
+
+
+                    <p>
+
+                        Los campos de nombre, correo electrónico
+                        y mensaje son obligatorios para completar
+                        el formulario.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         PIE DE PÁGINA
+         ===================================================== -->
+
+    <footer>
+
+        <p>
+
+            © 2026 Valentina · Sitio informativo
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
